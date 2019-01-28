@@ -57,9 +57,9 @@ namespace WebDevAssign2.Controllers
                     products = products.OrderBy(p => p.Name);
                     break;
             }
-            const int PageItems = 3;
+            //const int PageItems = 3;
             int currentPage = (page ?? 1);
-            viewModel.Products = products.ToPagedList(currentPage, PageItems);
+            viewModel.Products = products.ToPagedList(currentPage, Constants.PagedItems);
             //viewModel.Products = products;
             viewModel.SortBy = sortBy;
             viewModel.Sorts = new Dictionary<string, string>
